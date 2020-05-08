@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'color.apps.ColorConfig',
+    'hamlpy',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -63,6 +65,12 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'loaders': (
+                ('django.template.loaders.cached.Loader', (
+                    'hamlpy.template.loaders.HamlPyFilesystemLoader',
+                    'hamlpy.template.loaders.HamlPyAppDirectoriesLoader'
+                )),
+            )
         },
     },
 ]
