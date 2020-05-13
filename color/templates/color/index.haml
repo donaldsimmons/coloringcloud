@@ -1,7 +1,11 @@
 {% load static %}
 
-%h1 Hello
-{% autoescape off %}
-{ svg }}
-{% endautoescape %}
-%script(src="{% static 'color/main.js' %}" type="text/javascript")
+%head
+    %title Coloring Cloud
+    %link(href="{% static 'color/styles/main.css' %}" type="text/css" rel="stylesheet")
+
+%body
+    {% autoescape off %}
+    {{ svg }}
+    {% endautoescape %}
+    %script(src="{% static 'color/js/main.js' %}" type="text/javascript")
