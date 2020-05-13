@@ -2,3 +2,62 @@ svg {
     width: 100%;
     height: 100%;
 }
+
+#palatte {
+    background: -webkit-linear-gradient(#bfbfbf, #858585);
+    background:    -moz-linear-gradient(#bfbfbf, #858585);
+    background:         linear-gradient(#bfbfbf, #858585);
+    border-radius: 10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+       -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+            box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+}
+
+.swatch {
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    float: left;
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+       -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+            box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+}
+
+.swatch:nth-child(2) {
+    margin: 10px 0;
+}
+
+.selected-color {
+    border: 3px black solid;
+    margin: 8px 10px 8px 10px;
+}
+
+#sheet {
+    float: left;
+}
+
+#red {
+    background: -webkit-linear-gradient(#ff8a8a, #ff0000);
+    background:    -moz-linear-gradient(#ff8a8a, #ff0000);
+    background:         linear-gradient(#ff8a8a, #ff0000);
+}
+
+#blue {
+    background-color: blue;
+    background: -webkit-linear-gradient(#a19cff, #0d00ff);
+    background:    -moz-linear-gradient(#a19cff, #0d00ff);
+    background:         linear-gradient(#a19cff, #0d00ff);
+}
+
+#yellow {
+    background: -webkit-linear-gradient(#fffeb5, #fffb00);
+    background:    -moz-linear-gradient(#fffeb5, #fffb00);
+    background:         linear-gradient(#fffeb5, #fffb00);
+}
