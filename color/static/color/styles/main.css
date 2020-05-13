@@ -1,3 +1,7 @@
+#sheet {
+    width:100%;
+}
+
 svg {
     width: 100%;
     height: 100%;
@@ -15,7 +19,7 @@ svg path {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    float: left;
+    position: absolute;
     -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
        -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
             box-shadow: 0 1px 5px rgba(0,0,0,0.5);
@@ -41,8 +45,4 @@ svg path {
 .selected-color {
     border: 3px black solid;
     margin: 7px 10px 7px 10px;
-}
-
-#sheet {
-    float: left;
 }

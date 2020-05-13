@@ -24,9 +24,11 @@
     }
 
     outline_areas = $('#Color').children();
-
     outline_areas.on('click', changeFillColor);
+
     $('.swatch').on('click', changeSelectedColor);
+
+    $('#palatte').draggable({containment: 'parent'});
 
     fillPalatte();
 })(jQuery);
