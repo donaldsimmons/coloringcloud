@@ -3,6 +3,10 @@ svg {
     height: 100%;
 }
 
+svg path {
+    cursor: pointer;
+}
+
 #palatte {
     background: -webkit-linear-gradient(#bfbfbf, #858585);
     background:    -moz-linear-gradient(#bfbfbf, #858585);
@@ -36,7 +40,7 @@ svg {
 
 .selected-color {
     border: 3px black solid;
-    margin: 8px 10px 8px 10px;
+    margin: 7px 10px 7px 10px;
 }
 
 #sheet {
@@ -44,20 +48,13 @@ svg {
 }
 
 #red {
-    background: -webkit-linear-gradient(#ff8a8a, #ff0000);
-    background:    -moz-linear-gradient(#ff8a8a, #ff0000);
-    background:         linear-gradient(#ff8a8a, #ff0000);
+    background-color: red;
 }
 
 #blue {
     background-color: blue;
-    background: -webkit-linear-gradient(#a19cff, #0d00ff);
-    background:    -moz-linear-gradient(#a19cff, #0d00ff);
-    background:         linear-gradient(#a19cff, #0d00ff);
 }
 
 #yellow {
-    background: -webkit-linear-gradient(#fffeb5, #fffb00);
-    background:    -moz-linear-gradient(#fffeb5, #fffb00);
-    background:         linear-gradient(#fffeb5, #fffb00);
+    background-color: yellow;
 }
