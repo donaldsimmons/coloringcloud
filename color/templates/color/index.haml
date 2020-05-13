@@ -7,9 +7,13 @@
 %body
     #easel
         %ol#palatte
-            %li#red.swatch.selected-color
-            %li#blue.swatch
-            %li#yellow.swatch
+            {% for color in colors %}
+                {% if forloop.first %}
+                    %li.swatch.selected-color(id="{{color}}")
+                {% else %}
+                    %li.swatch(id="{{color}}")
+                {% endif %}
+            {% endfor %}
         #sheet
             {% autoescape off %}
             {{ svg }}
