@@ -5,8 +5,13 @@
     %link(href="{% static 'color/styles/main.css' %}" type="text/css" rel="stylesheet")
 
 %body
-    {% autoescape off %}
-    {{ svg }}
-    {% endautoescape %}
+    #easel
+        #sheet
+            {% autoescape off %}
+            {{ svg }}
+            {% endautoescape %}
+        #palatte
+            %ol#palatte-colors
+
     %script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
     %script(src="{% static 'color/js/main.js' %}" type="text/javascript")
