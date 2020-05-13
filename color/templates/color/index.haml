@@ -6,12 +6,14 @@
 
 %body
     #easel
+        %ol#palatte
+            %li#red.swatch.selected-color
+            %li#blue.swatch
+            %li#yellow.swatch
         #sheet
             {% autoescape off %}
             {{ svg }}
             {% endautoescape %}
-        #palatte
-            %ol#palatte-colors
 
     %script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
     %script(src="{% static 'color/js/main.js' %}" type="text/javascript")
