@@ -1,6 +1,44 @@
 (function($) {
+    function rgbColorToHex(color) {
+        sep = color.indexOf(",") > -1 ? "," : " ";
+        rgb = color.substr(4).split(')')[0].split(sep);
+        hexPieces = [
+            (+rgb[0]).toString(16),
+            (+rgb[1]).toString(16),
+            (+rgb[2]).toString(16)
+        ];
+
+        for (i=0; i<hexPieces.length; i++) {
+            if (hexPieces[i].length == 1) {
+                hexPieces[i] = "0" + hexPieces[i];
+            };
+        };
+
+        return "#" + hexPieces[0] + hexPieces[1] + hexPieces[2];
+    };
+
+    function lockPathColor(path) {
+        $(path).addClass('locked');
+        unlockedPaths--;
+    };
+
+    function checkColorPlacement(path) {
+        selectedPath = $(path);
+        correctColor = selectedPath.attr('data-match-color').toUpperCase();
+        currentColor = rgbColorToHex(selectedPath.attr('fill')).toUpperCase();
+        return (correctColor == currentColor);
+    };
+
     function changeFillColor() {
-        $(this).attr('fill', selectedColor);
+        selectedPath = $(this);
+        unlocked = !selectedPath.hasClass('locked');
+        if (unlocked) {
+            selectedPath.attr('fill', selectedColor);
+            isColorCorrect = checkColorPlacement(selectedPath);
+            if (isColorCorrect) {
+                lockPathColor(selectedPath);
+            };
+        };
     };
 
     function changeSelectedColor() {
@@ -22,6 +60,8 @@
         };
         changeSelectedColor();
     }
+
+    unlockedPaths = $('path').not('.locked')
 
     outline_areas = $('#Color').children();
     outline_areas.on('click', changeFillColor);
