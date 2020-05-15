@@ -17,7 +17,7 @@
     function fillPalatte() {
         swatches = $('.swatch')
         for (i=0; i < swatches.length; i++) {
-            fillColor = swatches[i].id;
+            fillColor = $(swatches[i]).attr('data-color');
             $(swatches[i]).css('background-color', fillColor);
         };
         changeSelectedColor();

@@ -9,9 +9,9 @@
         %ol#palatte
             {% for color in colors %}
                 {% if forloop.first %}
-                    %li.swatch.selected-color(id="{{color}}")
+                    %li.swatch.selected-color(data-color="{{color}}")
                 {% else %}
-                    %li.swatch(id="{{color}}")
+                    %li.swatch(data-color="{{color}}")
                 {% endif %}
             {% endfor %}
         #sheet
