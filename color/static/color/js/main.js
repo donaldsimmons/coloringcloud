@@ -66,10 +66,10 @@
     };
 
     function fillPalatte() {
-        swatches = $('.swatch')
-        for (i=0; i < swatches.length; i++) {
-            fillColor = $(swatches[i]).attr('data-color');
-            $(swatches[i]).css('background-color', fillColor);
+        colors = $('.color');
+        for (i=0; i < colors.length; i++) {
+            fillColor = $(colors[i]).attr('data-color');
+            $(colors[i]).css('background-color', fillColor);
         };
         changeSelectedColor();
     };
@@ -79,7 +79,7 @@
     outline_areas = $('#Color').children();
     outline_areas.on('click', changeFillColor);
 
-    $('.swatch').on('click', changeSelectedColor);
+    $('.color').on('click', changeSelectedColor);
     $('#reset').on('click', resetFillColors);
     $('#menu-icon').on('click', toggleMenu);
 

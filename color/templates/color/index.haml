@@ -12,9 +12,9 @@
         %ul#palatte
             {% for color in colors %}
                 {% if forloop.first %}
-                    %li.swatch.selected-color(data-color="{{color}}")
+                    %li.swatch.color.selected-color(data-color="{{color}}")
                 {% else %}
-                    %li.swatch(data-color="{{color}}")
+                    %li.swatch.color(data-color="{{color}}")
                 {% endif %}
             {% endfor %}
             %li#reset.swatch
