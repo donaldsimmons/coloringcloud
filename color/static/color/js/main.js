@@ -41,6 +41,11 @@
         };
     };
 
+    function resetFillColors() {
+        $('[data-match-color]').attr('fill', '#FFFFFF').removeClass('locked');
+        unlockedPaths = $('path').not('.locked').length;
+    };
+
     function changeSelectedColor() {
         if (!event) {
             color = $('.selected-color').attr('id');
@@ -59,16 +64,17 @@
             $(swatches[i]).css('background-color', fillColor);
         };
         changeSelectedColor();
-    }
+    };
 
-    unlockedPaths = $('path').not('.locked')
+    unlockedPaths = $('path').not('.locked').length;
 
     outline_areas = $('#Color').children();
     outline_areas.on('click', changeFillColor);
 
     $('.swatch').on('click', changeSelectedColor);
+    $('#reset').on('click', resetFillColors);
 
-    $('#palatte').draggable({containment: 'parent'})
+    $('#palatte').draggable({containment: 'parent'});
 
     fillPalatte();
 })(jQuery);
