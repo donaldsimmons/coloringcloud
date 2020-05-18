@@ -1,3 +1,25 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#menu {
+    width: 25%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.75;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+#menu li {
+    color: #FFFFFF;
+    font-size: 20px;
+    margin: 20px;
+}
+
 #sheet {
     width:100%;
 }
@@ -18,7 +40,7 @@ svg path {
     border-radius: 10px;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0 5px;
     position: absolute;
     -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
        -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
@@ -28,7 +50,7 @@ svg path {
 .swatch {
     border: 1px black solid;
     border-radius: 10px;
-    margin: 10px;
+    margin: 10px 5px;
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -38,11 +60,34 @@ svg path {
             box-shadow: 0 1px 5px rgba(0,0,0,0.5);
 }
 
-.swatch:nth-child(2) {
-    margin: 10px 0;
+.swatch:hover {
+    border: 3px black solid;
+    margin: 7px 3px;
+}
+
+#reset {
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 10px 5px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    float: left;
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+       -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+            box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+}
+
+#reset:hover {
+    border: 3px black solid;
+    margin: 7px 3px;
+}
+
+#reset img {
+    border-radius: 10px;
 }
 
 .selected-color {
     border: 3px black solid;
-    margin: 7px 10px 7px 10px;
+    margin: 7px 3px;
 }

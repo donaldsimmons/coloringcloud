@@ -5,8 +5,11 @@
     %link(href="{% static 'color/styles/main.css' %}" type="text/css" rel="stylesheet")
 
 %body
+    %ul#menu
+        %li#resume Resume
+        %li#exit Exit
     #easel
-        %ol#palatte
+        %ul#palatte
             {% for color in colors %}
                 {% if forloop.first %}
                     %li.swatch.selected-color(data-color="{{color}}")
@@ -14,6 +17,8 @@
                     %li.swatch(data-color="{{color}}")
                 {% endif %}
             {% endfor %}
+            %li#reset
+                %img(src="{% static 'color/images/reset_icon.png' %}" width="50px" height="50px")
         #sheet
             {% autoescape off %}
             {{ svg }}
