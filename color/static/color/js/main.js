@@ -39,6 +39,10 @@
                 lockPathColor(selectedPath);
             };
         };
+
+        if (unlockedPaths == 0) {
+            console.log('Game Over: All Areas Colored Completely');
+        };
     };
 
     function resetFillColors() {
