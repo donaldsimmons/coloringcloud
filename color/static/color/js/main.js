@@ -68,7 +68,7 @@
 
     $('.swatch').on('click', changeSelectedColor);
 
-    $('#palatte').draggable({containment: 'parent'});
+    $('#palatte').draggable({containment: 'parent'})
 
     fillPalatte();
 })(jQuery);
