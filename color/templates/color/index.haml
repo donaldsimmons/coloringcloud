@@ -5,7 +5,7 @@
     %link(href="{% static 'color/styles/main.css' %}" type="text/css" rel="stylesheet")
 
 %body
-    %ul#menu
+    %ul#menu.hidden
         %li#resume Resume
         %li#exit Exit
     #easel
@@ -17,8 +17,10 @@
                     %li.swatch(data-color="{{color}}")
                 {% endif %}
             {% endfor %}
-            %li#reset
+            %li#reset.swatch
                 %img(src="{% static 'color/images/reset_icon.png' %}" width="50px" height="50px")
+            %li#menu-icon.swatch
+                %img(src="{% static 'color/images/home_icon.png' %}" width="50px" height="50px")
         #sheet
             {% autoescape off %}
             {{ svg }}

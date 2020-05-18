@@ -50,6 +50,10 @@
         unlockedPaths = $('path').not('.locked').length;
     };
 
+    function toggleMenu() {
+        $('#menu').toggle('slide');
+    };
+
     function changeSelectedColor() {
         if (!event) {
             color = $('.selected-color').attr('id');
@@ -77,6 +81,7 @@
 
     $('.swatch').on('click', changeSelectedColor);
     $('#reset').on('click', resetFillColors);
+    $('#menu-icon').on('click', toggleMenu);
 
     $('#palatte').draggable({containment: 'parent'});
 
