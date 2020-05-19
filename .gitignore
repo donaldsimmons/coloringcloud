@@ -1,6 +1,7 @@
 .DS_Store
+*.swp
 
 __pycache__/
-*.swp
+.python-version
 
 db.sqlite3
